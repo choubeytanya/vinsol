@@ -1,0 +1,173 @@
+@import "variable";
+
+@mixin font($size) {
+  font-size: $size;
+} 
+
+@mixin line($col, $margin) {
+  content: "";
+  background-color: $col;
+  height: 1px;
+  width: 200px;
+  display: block;
+  margin: $margin auto;
+}
+
+@mixin line($col, $margin) {
+  content: "";
+  background-color: $col;
+  height: 1px;
+  width: 200px;
+  display: block;
+  margin: $margin auto;
+}
+
+body{
+  font-family: $font;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
+.logo {
+  width: 190px;
+  .logo-img {
+    width: 100%;
+  }
+}
+
+.top-header {
+  .header-logo {
+    width: 215px;
+    margin-right: 32px;
+    .header-image {
+      width: 100%;
+    }
+  }
+
+  .header-para {
+    font-family: "Didact Gothic", sans-serif;
+    padding: 0 32px;
+    @include font(32px);
+  }
+}
+
+.main-section {
+  .dropdown{
+    padding:10px;
+  }
+  
+  .dropdown-btn {
+    @include font(17px);
+  }
+  .dropdown-options {
+    &:hover {
+      background-color: $aqua !important;
+      color: $white !important;
+      cursor: pointer;
+    }
+  }
+  .items {
+    width: 100%;
+    .item-row{
+      width:inherit;
+    }
+    .itembox {
+      padding: 10px 10px !important;
+      cursor: pointer;
+      .img-link{
+        overflow: hidden; 
+      }
+      .item-image{
+        transition-duration: 0.5s;
+    }
+      &:hover{
+        .item-image{
+            transform:scale(1.05);
+        }
+      }
+      .itembox-heading {
+        @include font(21px);
+      }
+      .itembox-para {
+        @include font(14px);
+      }
+    }
+  }
+}
+
+.footer-section {
+  background-color: $blue;
+  box-shadow: 2px 0 5px $grey inset;
+  .footer-heading {
+    @include font(11px);
+  }
+  .footer-img2 {
+    left: 16px;
+    top: 7px;
+    transform: rotate(8deg);
+  }
+  .footer-img1{
+    z-index:2;
+  }
+
+  .see-more {
+    display: inline-block;
+    color: $orange;
+    &::before {
+      @include line($grey,25px);
+    }
+  }
+  
+  .footer-para {
+    @include font(14px);
+  }
+  .tweet-timing,
+  .contact-link {
+    @include font(9px);
+  }
+  .tweet-timing {
+    margin-bottom: 9px !important;
+  }
+  .contact-list {
+    list-style: none;
+  }
+  .email,
+  .contact-link {
+    color: $orange;
+  }
+
+  .footer-email,
+  .follow {
+    &::before {
+        @include line($grey,25px);
+    }
+  }
+  .follow {
+    color: $orange;
+  }
+  .box {
+    background: $orange;
+    top: -5px;
+    .box-heading,
+    .mailer {
+      &::after {
+        @include line($white,5px);
+      }
+    }
+    .box-heading {
+      @include font(32px);
+    }
+    .India,
+    .USA,
+    .mailer {
+      @include font(18px);
+    }
+  }
+}
+
+@import "media";

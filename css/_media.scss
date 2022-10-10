@@ -1,0 +1,53 @@
+@media (min-width: 320px) and (max-width: 767px) {
+  .top-header {
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .header-logo {
+      margin-right: 0;
+    }
+    .header-para {
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  .footer-section {
+    background-color: $dark-grey;
+    color: $white;
+    display: flex;
+    .flickr {
+      order: 2;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .media {
+      order: 3;
+      padding: 0;
+    }
+  }
+  .main-section{
+    .items{
+        .itembox{
+            margin: 10px auto!important;
+        }
+    }
+  }
+  .dropdown{
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .footer-img1,
+  .footer-img2 {
+    width: 100%;
+  }
+  .footer-section {
+    .contact-list {
+      margin: 0 5px !important;
+    }
+  }
+}
